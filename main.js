@@ -1,6 +1,6 @@
 /* ================================================================
-   SAFA SARFRAZ — Website JavaScript
-   File: js/main.js
+   SAFA SARFRAZ - Website JavaScript
+   File: main.js
 
    This file handles all the interactive behaviour on the site:
    1. Page switching (show/hide sections)
@@ -52,7 +52,7 @@ function showPage(id) {
 
   // --- Scroll back to top smoothly ---
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  history.pushState(null, '', '/' + id);
+  window.location.hash = id;
 
   // --- Re-trigger scroll animations for the new page ---
   // Small delay to let the page render first
@@ -265,4 +265,10 @@ document.body.addEventListener('mouseout', (e) => {
   if (el) {
     document.body.classList.remove('hovering');
   }
+});
+
+// Load the correct page if URL has a hash on arrival
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash.replace('#', '');
+  if (hash) showPage(hash);
 });
