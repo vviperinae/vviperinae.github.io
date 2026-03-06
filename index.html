@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Safa Sarfraz</title>
+
+  <!-- ============================================================
+    Google Fonts
+    - "Cormorant Garamond" = elegant serif for headings
+    - "Outfit" = clean modern font for body text
+  ============================================================ -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Link to our external CSS file -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+    CURSOR FOLLOWER
+    A small decorative dot that follows the mouse.
+    Controlled in js/main.js
+  ============================================================ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============================================================
+    NAVIGATION BAR
+    Fixed at top. Each link calls showPage() in main.js
+    to switch between sections without reloading the page.
+  ============================================================ -->
+  <nav id="navbar">
+    <!-- Logo / Name (clicking goes to Home) -->
+    <div class="nav-logo" onclick="showPage('home')">Safa Sarfraz</div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links">
+      <li><a onclick="showPage('home')"        id="nav-home"        class="nav-link active">Home</a></li>
+      <li><a onclick="showPage('about')"       id="nav-about"       class="nav-link">About</a></li>
+      <li><a onclick="showPage('commitments')" id="nav-commitments" class="nav-link">Commitments</a></li>
+      <li><a onclick="showPage('projects')"    id="nav-projects"    class="nav-link">Projects</a></li>
+      <li><a onclick="showPage('contact')"     id="nav-contact"     class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============================================================
+    PAGE: HOME
+    The landing/hero section. Shown by default.
+  ============================================================ -->
+  <section class="page active" id="home">
+
+    <!-- Animated background blobs (pure CSS, see style.css) -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="home-content">
+      <!-- Animated greeting label -->
+      <p class="greeting animate-up delay-1">Computer Engineering Student · Cybersecurity Enthusiast</p>
+
+      <!-- Main headline — split into two lines for style -->
+      <h1 class="home-name animate-up delay-2">
+        Hello, I'm<br/>
+        <em>Safa Sarfraz</em>
+      </h1>
+
+      <!-- Short tagline -->
+      <p class="home-tagline animate-up delay-3">
+        Building secure systems, meaningful projects, and a future in cybersecurity —
+        one line of code at a time.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="home-btns animate-up delay-4">
+        <button class="btn btn-primary" onclick="showPage('projects')">View Projects</button>
+        <button class="btn btn-outline" onclick="showPage('contact')">Get in Touch</button>
+      </div>
+
+      <!-- Quick stats row -->
+      <div class="home-stats animate-up delay-5">
+        <div class="stat">
+          <span class="stat-num">3.61</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Active Roles</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">'28</span>
+          <span class="stat-label">Graduating</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative scroll hint at the bottom -->
+    <div class="scroll-hint animate-up delay-5">
+      <span>Scroll or navigate above</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    PAGE: ABOUT
+  ============================================================ -->
+  <section class="page" id="about">
+    <div class="page-inner">
+
+      <!-- Section header -->
+      <div class="section-header">
+        <span class="section-label">Who I am</span>
+        <h2 class="section-title">A little bit <em>about me.</em></h2>
+      </div>
+
+      <!-- Two-column layout: bio on left, details on right -->
+      <div class="about-grid">
+
+        <!-- Left: Bio text -->
+        <div class="about-bio">
+          <p>I'm Safa — a Computer Engineering student at PETRONAS University of Technology, already on the Dean's List in my first year. I grew up in Dubai and brought that global perspective with me into everything I do.</p>
+          <p>My passion is cybersecurity. I'm actively learning penetration testing, vulnerability management, and ethical hacking — driven by the belief that technology should be secure for everyone. I hold the Google Cybersecurity Professional Certificate and I'm always leveling up my toolkit.</p>
+          <p>Beyond the technical, I love being involved. From emceeing major university events to mentoring newcomers in CTF competitions — I show up fully wherever I commit.</p>
+          <p>I'm also pursuing a student exchange opportunity, eager to gain fresh perspectives and grow both personally and professionally.</p>
+        </div>
+
+        <!-- Right: Education + Skills -->
+        <div class="about-aside">
+
+          <!-- Education block -->
+          <div class="aside-block">
+            <h3 class="aside-title">Education</h3>
+            <div class="edu-item">
+              <p class="edu-name">PETRONAS University of Technology</p>
+              <p class="edu-detail">B.Eng Computer Engineering (Hons)<br/>Sep 2024 – Sep 2028 · CGPA 3.61</p>
+              <span class="badge">🏆 Dean's List</span>
+            </div>
+            <div class="edu-item">
+              <p class="edu-name">GEMS Our Own English High School</p>
+              <p class="edu-detail">Dubai, UAE · Graduated 2024 · GPA 3.9</p>
+            </div>
+          </div>
+
+          <!-- Skills block -->
+          <div class="aside-block">
+            <h3 class="aside-title">Technical Skills</h3>
+            <div class="skills-wrap">
+              <!-- Each skill-tag gets a hover animation from CSS -->
+              <span class="skill-tag">Threat Detection</span>
+              <span class="skill-tag">Penetration Testing</span>
+              <span class="skill-tag">System Hardening</span>
+              <span class="skill-tag">Incident Response</span>
+              <span class="skill-tag">Burp Suite</span>
+              <span class="skill-tag">Wireshark</span>
+              <span class="skill-tag">Nmap</span>
+              <span class="skill-tag">Metasploit</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C / C++</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML &amp; CSS</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    PAGE: COMMITMENTS
+  ============================================================ -->
+  <section class="page" id="commitments">
+    <div class="page-inner">
+
+      <div class="section-header">
+        <span class="section-label">What I do</span>
+        <h2 class="section-title">My <em>commitments.</em></h2>
+      </div>
+
+      <!-- Each card animates in on page load via JS -->
+      <div class="commitments-list">
+
+        <div class="commit-card">
+          <div class="commit-meta">
+            <span class="commit-date">Feb 2026 – Present</span>
+            <span class="commit-org">CYBERHAX</span>
+          </div>
+          <div class="commit-body">
+            <h3 class="commit-role">Talent Development Officer</h3>
+            <p class="commit-desc">Appointed as Emcee and committee for the Cyber Smart Carnival 2026 — a university-wide cybersecurity awareness event. Mentors newcomers through CTF competitions and introduces them to real-world security tools.</p>
+          </div>
+        </div>
+
+        <div class="commit-card">
+          <div class="commit-meta">
+            <span class="commit-date">Jan 2025 – Present</span>
+            <span class="commit-org">Google Developer Student Club</span>
+          </div>
+          <div class="commit-body">
+            <h3 class="commit-role">Technical Development Member</h3>
+            <p class="commit-desc">Served as Assistant Head of Department and speaker at the Click &amp; Learn workshop on Google Applications. Created learning materials and shared industry-relevant tools with club members.</p>
+          </div>
+        </div>
+
+        <div class="commit-card">
+          <div class="commit-meta">
+            <span class="commit-date">Sep 2024 – Present</span>
+            <span class="commit-org">EEE Student Society</span>
+          </div>
+          <div class="commit-body">
+            <h3 class="commit-role">Academic &amp; Career Department Member</h3>
+            <p class="commit-desc">Emcee for STAR Awards 2025, Freshman Bootcamp Jan 2025, and SAS Day Sep 2025. Supported the 5G Launching event and Ceremony &amp; Protocol during SAS Day 2024.</p>
+          </div>
+        </div>
+
+        <div class="commit-card">
+          <div class="commit-meta">
+            <span class="commit-date">Jan 2025 – Sep 2025</span>
+            <span class="commit-org">IEM UTP Student Chapter</span>
+          </div>
+          <div class="commit-body">
+            <h3 class="commit-role">Event Management Department Member</h3>
+            <p class="commit-desc">Coordinated technical visits including the Tanjung Tualang Tin Dredge trip. Handled logistics and ensured smooth execution of events for student members.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    PAGE: PROJECTS
+  ============================================================ -->
+  <section class="page" id="projects">
+    <div class="page-inner">
+
+      <div class="section-header">
+        <span class="section-label">What I've built</span>
+        <h2 class="section-title">My <em>projects.</em></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Each card has a language tag, title, and description -->
+        <div class="proj-card">
+          <span class="proj-lang">C++</span>
+          <h3 class="proj-name">MP3 Playlist Organizer</h3>
+          <p class="proj-desc">A music library management system using linked lists and tree data structures to efficiently organize songs and playlists.</p>
+          <div class="proj-arrow">→</div>
+        </div>
+
+        <div class="proj-card">
+          <span class="proj-lang">HTML · CSS · JS · SQL</span>
+          <h3 class="proj-name">Ecco — Waste Management System</h3>
+          <p class="proj-desc">Built for the PETROBOTS Hackathon. A web platform with AI image recognition for waste classification, promoting proper disposal habits.</p>
+          <div class="proj-arrow">→</div>
+        </div>
+
+        <div class="proj-card">
+          <span class="proj-lang">Python · SQL</span>
+          <h3 class="proj-name">Bookstore Management System</h3>
+          <p class="proj-desc">A database-driven system to manage inventory, sales, and customer data with CRUD operations and clean Python-SQL integration.</p>
+          <div class="proj-arrow">→</div>
+        </div>
+
+        <div class="proj-card">
+          <span class="proj-lang">C · Ubuntu</span>
+          <h3 class="proj-name">Blackjack Game with UI</h3>
+          <p class="proj-desc">A graphical Blackjack game built in C on Ubuntu, showcasing game logic, user interaction design, and low-level programming fundamentals.</p>
+          <div class="proj-arrow">→</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    PAGE: CONTACT
+  ============================================================ -->
+  <section class="page" id="contact">
+    <div class="page-inner">
+
+      <div class="section-header">
+        <span class="section-label">Let's connect</span>
+        <h2 class="section-title">Say <em>hello.</em></h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Left: Links -->
+        <div class="contact-links-wrap">
+          <p class="contact-intro">
+            "Always open to new opportunities, collaborations, and conversations about tech."
+          </p>
+
+          <div class="contact-links">
+            <a href="mailto:safasarfraz12@gmail.com" class="contact-link">
+              <span class="contact-icon">✉</span>
+              <span>safasarfraz12@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/safa-sarfraz" target="_blank" class="contact-link">
+              <span class="contact-icon">in</span>
+              <span>Safa Sarfraz on LinkedIn</span>
+            </a>
+            <a href="tel:+601112671466" class="contact-link">
+              <span class="contact-icon">☎</span>
+              <span>+60 111 267 1466</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Certifications -->
+        <div class="cert-section">
+          <h3 class="aside-title">Certifications</h3>
+          <ul class="cert-list">
+            <li class="cert-item">
+              <span class="cert-dot"></span>
+              Google Cybersecurity Professional Certificate
+            </li>
+            <li class="cert-item">
+              <span class="cert-dot"></span>
+              Scientific Computing with Python — freeCodeCamp
+            </li>
+            <li class="cert-item">
+              <span class="cert-dot"></span>
+              Responsive Web Design — freeCodeCamp
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    FOOTER
+    Shown at the bottom of every page.
+  ============================================================ -->
+  <footer>
+    <p>© 2026 Safa Sarfraz &nbsp;·&nbsp; Made with curiosity &amp; caffeine ☕</p>
+  </footer>
+
+  <!-- Link to our external JavaScript file (loaded at end of body for performance) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
