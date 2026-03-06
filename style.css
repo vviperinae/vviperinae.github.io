@@ -405,10 +405,10 @@ body.hovering .cursor-ring {
 .home-stats {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 2.5rem;
   border-top: 1px solid var(--line);
+  width: 100%;
 }
 
 .stat {
@@ -417,15 +417,14 @@ body.hovering .cursor-ring {
   justify-content: center;
 }
 
-.stat svg {
-  color: var(--accent);
+.stat-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-/* Thin vertical divider between icons */
-.stat-divider {
-  width: 1px;
-  height: 28px;
-  background: var(--line);
+.stat-divider svg {
+  opacity: 0.5;
 }
 
 /* --- Scroll hint --- */
