@@ -52,6 +52,7 @@ function showPage(id) {
 
   // --- Scroll back to top smoothly ---
   window.scrollTo({ top: 0, behavior: 'smooth' });
+  history.pushState(null, '', '/' + id);
 
   // --- Re-trigger scroll animations for the new page ---
   // Small delay to let the page render first
